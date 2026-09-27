@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b1020;
+  --color-paper: #f4f7f5;
+  --color-acid: #6ee7b7;
+  --color-mint: #d1fae5;
+}
+
+:root { color-scheme: dark; --bg: #07100e; --surface: #0e1b17; --surface-2: #13251f; --text: #edfdf5; --muted: #a0b9ae; --line: #284438; --accent: #6ee7b7; --accent-ink: #063526; --danger: #fca5a5; }
+:root[data-theme='light'] { color-scheme: light; --bg: #f4f7f5; --surface: #ffffff; --surface-2: #e7f0eb; --text: #12221b; --muted: #587064; --line: #c8dad0; --accent: #087f5b; --accent-ink: #ffffff; --danger: #b42318; }
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { min-width: 320px; margin: 0; background: radial-gradient(circle at 80% -10%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 30rem), var(--bg); color: var(--text); font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+button, select, textarea { font: inherit; }
+button, select, textarea { border: 1px solid var(--line); }
+button:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.mono { font-family: "Cascadia Code", "SFMono-Regular", Consolas, monospace; }
+.surface { background: color-mix(in srgb, var(--surface) 92%, transparent); border: 1px solid var(--line); box-shadow: 0 1.5rem 4rem rgb(0 0 0 / .12); }
+.control { width: 100%; border-radius: .75rem; padding: .8rem 1rem; background: var(--surface-2); color: var(--text); }
+.button { border-radius: .7rem; padding: .7rem 1rem; cursor: pointer; transition: transform .15s ease, background .15s ease; }
+.button:hover { transform: translateY(-1px); }
+.button-primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 750; }
+.button-quiet { background: transparent; color: var(--text); }
+.message { opacity: 0; transform: translateY(-.25rem); transition: opacity .16s ease, transform .16s ease; }
+.message--visible { opacity: 1; transform: translateY(0); }
+.message[data-state='success'] { color: var(--accent); font-weight: 700; }
+.message[data-state='error'] { color: var(--danger); font-weight: 700; }
+.bit-on { color: var(--accent); font-weight: 800; }
+.bit-off { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }

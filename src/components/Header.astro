@@ -1,0 +1,15 @@
+---
+import BrandMark from './BrandMark.astro';
+import Icon from './Icon.astro';
+---
+<header class="mx-auto flex max-w-6xl items-center justify-between px-5 py-6 sm:px-8">
+  <a href="/" class="flex items-center gap-3 text-lg font-black tracking-tight" aria-label="Binarix, inicio">
+    <span class="grid size-10 place-items-center rounded-xl bg-[var(--accent)] text-[var(--accent-ink)]" aria-hidden="true">
+      <BrandMark />
+    </span>
+    <span>Binar<span class="text-[var(--accent)]">ix</span></span>
+  </a>
+  <button class="button button-quiet flex items-center gap-2 text-sm" type="button" id="theme-toggle" aria-label="Cambiar tema">
+    <Icon name="theme" className="size-4" /><span>Modo claro</span>
+  </button>
+</header>

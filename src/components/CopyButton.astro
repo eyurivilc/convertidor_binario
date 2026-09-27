@@ -1,0 +1,11 @@
+---
+---
+<button
+  id="copy"
+  class="inline-flex min-h-10 items-center justify-center gap-2 rounded-xl border border-[var(--accent)] bg-[color-mix(in_srgb,var(--accent)_12%,transparent)] px-4 py-2 text-sm font-bold text-[var(--accent)] shadow-sm transition-colors duration-150 hover:bg-[var(--accent)] hover:text-[var(--accent-ink)] focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:border-[var(--line)] disabled:bg-[var(--surface-2)] disabled:text-[var(--muted)] disabled:opacity-70 data-[copied=true]:border-[var(--accent)] data-[copied=true]:bg-[var(--accent)] data-[copied=true]:text-[var(--accent-ink)]"
+  type="button"
+  disabled
+>
+  <slot name="icon" />
+  <span id="copy-label">Copiar</span>
+</button>

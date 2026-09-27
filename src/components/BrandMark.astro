@@ -1,0 +1,14 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<svg class={compact ? 'size-full' : 'size-7'} viewBox="0 0 32 32" fill="none" aria-hidden="true" focusable="false">
+  <path d="M7 5h10a5 5 0 0 1 0 10H7V5Zm0 12h11a5 5 0 0 1 0 10H7V17Z" fill="currentColor" />
+  <path d="M7 10h10M7 22h11" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round" />
+  <circle cx="10" cy="10" r="1.5" fill="var(--accent)" /><circle cx="14" cy="10" r="1.5" fill="var(--accent)" /><circle cx="10" cy="22" r="1.5" fill="var(--accent)" /><circle cx="14" cy="22" r="1.5" fill="var(--accent)" />
+  <path d="m21 9 4 3-4 3M21 19l4 3-4 3" stroke="var(--accent)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
