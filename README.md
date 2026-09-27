@@ -37,4 +37,4 @@ La conversión se ejecuta íntegramente en el navegador; no requiere cuentas, AP
 
 ## Licencia
 
-ISC.
+MIT. Ver [LICENSE](LICENSE).
